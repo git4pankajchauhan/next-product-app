@@ -1,14 +1,17 @@
 {
-  "name": "next-blog-app",
+  "name": "next-product-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 4000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.1",
+    "@material-ui/icons": "^4.11.2",
+    "bootstrap": "^5.0.2",
     "mongoose": "^5.13.2",
     "next": "11.0.1",
     "react": "17.0.2",
