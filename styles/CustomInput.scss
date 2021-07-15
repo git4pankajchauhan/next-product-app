@@ -1,0 +1,78 @@
+@import '../../Assets/css/var';
+
+/*Form Component*/
+.input-wrapper {
+  position: relative;
+  margin-bottom: 1.2em;
+  width: 100%;
+  .input-box {
+    background-color: #fff;
+    display: block;
+    padding: 0.7em 1em;
+    width: 100%;
+    border: 2px solid rgba($clr-dark, 0.2);
+    color: $clr-body;
+    font-size: 1.4rem;
+    position: relative;
+    border-radius: 3px;
+    outline: none;
+    transition: all 0.3s ease;
+    &:focus,
+    &:valid {
+      border: 2px solid rgba($clr-blue, 0.5);
+      border-radius: 3px;
+      background-color: #fff;
+      color: $clr-body;
+    }
+    &:focus ~ label,
+    &:valid ~ label {
+      display: unset !important;
+      top: 2px;
+      left: 14px;
+      background: #fff;
+      padding: 0 0.6em;
+      font-size: 1rem;
+    }
+  }
+  input[type='file'] {
+    color: transparent;
+    padding-right: 7em;
+    &::-webkit-file-upload-button {
+      border: none;
+      color: rgb(160, 159, 159);
+      font-size: 1.2rem;
+      position: absolute;
+      right: -4px;
+      top: 0;
+      bottom: 0;
+      max-width: 100px;
+      padding: 0 1em;
+    }
+    &:focus,
+    &:valid {
+      border: 2px solid rgba($clr-blue, 0.5);
+      border-radius: 3px;
+      background-color: #fff;
+      color: $clr-body;
+    }
+
+    &:focus::-webkit-file-upload-button,
+    &:valid::-webkit-file-upload-button {
+      color: #fff;
+      background: rgba($clr-blue, 0.5);
+    }
+  }
+  select.input-box {
+    color: $clr-dark;
+  }
+  label {
+    position: absolute;
+    top: 50%;
+    left: 1.9rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: $clr-dark;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+  }
+}

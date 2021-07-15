@@ -1,11 +1,16 @@
-import Layout from 'components/Layout/Layout'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import AdminLayout from 'components/Layout/AdminLayout'
+import MainLayout from 'components/Layout/MainLayout'
+import { wrapper } from 'redux/store'
+import 'styles/admin.scss'
+import 'styles/banner.scss'
+import 'styles/footer.scss'
 import 'styles/globals.scss'
 import 'styles/nav.scss'
-import 'styles/footer.scss'
-import 'styles/banner.scss'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 function MyApp({ Component, pageProps }) {
+  const Layout = Component.AdminLayout ? AdminLayout : MainLayout
+
   return (
     <Layout>
       <Component {...pageProps} />
@@ -13,4 +18,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default wrapper.withRedux(MyApp)
