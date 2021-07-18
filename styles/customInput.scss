@@ -1,17 +1,16 @@
-@import '../../Assets/css/var';
+@import 'styles/var';
 
-/*Form Component*/
 .input-wrapper {
   position: relative;
   margin-bottom: 1.2em;
   width: 100%;
   .input-box {
-    background-color: #fff;
+    background-color: $clr-white;
     display: block;
     padding: 0.7em 1em;
     width: 100%;
-    border: 2px solid rgba($clr-dark, 0.2);
-    color: $clr-body;
+    border: 2px solid rgba($clr-dark-grey, 0.2);
+    color: $clr-dark-grey;
     font-size: 1.4rem;
     position: relative;
     border-radius: 3px;
@@ -19,17 +18,15 @@
     transition: all 0.3s ease;
     &:focus,
     &:valid {
-      border: 2px solid rgba($clr-blue, 0.5);
-      border-radius: 3px;
-      background-color: #fff;
-      color: $clr-body;
+      border: 2px solid rgba($clr-primary, 0.5);
+      color: inherit;
     }
     &:focus ~ label,
     &:valid ~ label {
       display: unset !important;
       top: 2px;
       left: 14px;
-      background: #fff;
+      background: $clr-white;
       padding: 0 0.6em;
       font-size: 1rem;
     }
@@ -39,7 +36,7 @@
     padding-right: 7em;
     &::-webkit-file-upload-button {
       border: none;
-      color: rgb(160, 159, 159);
+      color: $clr-dark-grey;
       font-size: 1.2rem;
       position: absolute;
       right: -4px;
@@ -48,22 +45,15 @@
       max-width: 100px;
       padding: 0 1em;
     }
-    &:focus,
-    &:valid {
-      border: 2px solid rgba($clr-blue, 0.5);
-      border-radius: 3px;
-      background-color: #fff;
-      color: $clr-body;
-    }
 
     &:focus::-webkit-file-upload-button,
     &:valid::-webkit-file-upload-button {
-      color: #fff;
-      background: rgba($clr-blue, 0.5);
+      color: $clr-white;
+      background: $clr-primary;
     }
   }
   select.input-box {
-    color: $clr-dark;
+    color: $clr-dark-grey;
   }
   label {
     position: absolute;
@@ -71,7 +61,7 @@
     left: 1.9rem;
     transform: translateY(-50%);
     pointer-events: none;
-    color: $clr-dark;
+    color: $clr-dark-grey;
     transition: all 0.3s ease;
     font-size: 1.2rem;
   }

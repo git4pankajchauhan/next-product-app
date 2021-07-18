@@ -1,5 +1,5 @@
-import CustomDrawer from 'cmponents/Drawer/CustomDrawer'
 import { StyledButton } from 'components/Button/Button.style'
+import CustomDrawer from 'components/Drawer/CustomDrawer'
 import { CustomInput, CustomTextArea } from 'components/Input/CustomInput'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
@@ -28,7 +28,7 @@ const AddProduct = props => {
         <CustomInput type='text' name='subTitle' onChange={onChange} placeholder='Enter Sub Title' />
         <CustomInput type='text' name='tags' onChange={onChange} placeholder='Enter Tags' />
         <CustomTextArea type='text' name='description' onChange={onChange} placeholder='Enter Description' />
-        <StyledButton>Add Product</StyledButton>
+        <StyledButton color='primary'>Add Product</StyledButton>
       </form>
     </CustomDrawer>
   )

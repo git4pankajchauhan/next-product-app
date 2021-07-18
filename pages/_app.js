@@ -7,6 +7,7 @@ import 'styles/banner.scss'
 import 'styles/footer.scss'
 import 'styles/globals.scss'
 import 'styles/nav.scss'
+import 'styles/customInput.scss'
 
 function MyApp({ Component, pageProps }) {
   const Layout = Component.AdminLayout ? AdminLayout : MainLayout
